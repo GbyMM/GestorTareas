@@ -9,67 +9,25 @@
 </head>
 <body>
     <div class="head">
-        <h1 class="title">Gestor de tareas   <i class="fa-solid fa-map-pin pin"></i></h1> 
-        <button class="annadir"><i class="fa-solid fa-calendar-plus tarea"></i>  Añadir Tarea</button> 
+        <h1 class="title">Gestor de tareas  <i class="fa-solid fa-map-pin pin"></i></h1> 
+        <div class="cardTask"></div> <!-- Pizarra donde van los post its -->
     </div>
-   
+    
+    <div class="cuerpo">
+       <form action="" class="formAnnadir">
+            <input type="text" placeholder="Título" name="titulo" >
+            <textarea placeholder="Descripción" name="descripcion" rows="3" ></textarea>
+            <input type="date" name="fecha">
+            <select name="" id="" class="priorityForm">
+                <option value="">Seleccionar prioridad</option>
+                <option value="baja">Baja</option>
+                <option value="media">Media</option>
+                <option value="alta">Alta</option>
+            </select>
+            <button type="submit" class="btnEnviar">Agregar</button>
+        </form> 
+    </div>
 
-    <div class="card">
-       <div class="container">
-            <h2>Titulo</h2>
-            <p>Descripción...</p>
-            <p class="fecha"><i class="fa-solid fa-calendar-days"></i> : ##/##/####</p>
-            <i class="fa-regular fa-trash-can"></i>
-            <i class="fa-solid fa-pen"></i>
-            <i class="fa-solid fa-map-pin pin"></i>
-        </div>
-        <div class="container">
-            <h2>Titulo</h2>
-            <p>Descripción...</p>
-            <p class="fecha"><i class="fa-solid fa-calendar-days"></i> : ##/##/####</p>
-            <i class="fa-regular fa-trash-can"></i>
-            <i class="fa-solid fa-pen"></i>
-            <i class="fa-solid fa-map-pin pin"></i>
-        </div>
-       
-        <div class="container">
-            <h2>Titulo</h2>
-            <p>Descripción...</p>
-            <p class="fecha"><i class="fa-solid fa-calendar-days"></i> : ##/##/####</p>
-            <i class="fa-regular fa-trash-can"></i>
-            <i class="fa-solid fa-pen"></i>
-            <i class="fa-solid fa-map-pin pin"></i>
-        </div>
-       
-        <div class="container">
-            <h2>Titulo</h2>
-            <p>Descripción...</p>
-            <p class="fecha"><i class="fa-solid fa-calendar-days"></i> : ##/##/####</p>
-            <i class="fa-regular fa-trash-can"></i>
-            <i class="fa-solid fa-pen"></i>
-            <i class="fa-solid fa-map-pin pin"></i>
-        </div>
-       
-        <div class="container">
-            <h2>Titulo</h2>
-            <p>Descripción...</p>
-            <p class="fecha"><i class="fa-solid fa-calendar-days"></i> : ##/##/####</p>
-            <i class="fa-regular fa-trash-can"></i>
-            <i class="fa-solid fa-pen"></i>
-            <i class="fa-solid fa-map-pin pin"></i>
-        </div>
-       
-        <div class="container">
-            <h2>Titulo</h2>
-            <p>Descripción...</p>
-            <p class="fecha"><i class="fa-solid fa-calendar-days"></i> : ##/##/####</p>
-            <i class="fa-regular fa-trash-can"></i>
-            <i class="fa-solid fa-pen"></i>
-            <i class="fa-solid fa-map-pin pin"></i>
-        </div>
-       
-       
-    </div>
     <script src="app.js"></script>
 </body>
 </html>
