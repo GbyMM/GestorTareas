@@ -1,142 +1,226 @@
-@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
 :root{
-    --color-red:#ff8c5f;
-    --color-yellow:#ffd670;
-    --color-green:#acdeaa;
-    --color-blue:#cddfed;
-    --color-pink:#fad7dc;
-    --color-secondary:#b63969;
+--color-red:#ff8c5f;
+--color-yellow:#ffda7d;
+--color-green:#acdeaa;
+--color-purple:#c1c8e3;
+--color-pink:#fad7dc;
+--color-secondary:#b63969;
 }
+/* ---CONFIG PÁGINA--- */
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 body{
-    background-color: var(--color-pink);
-    font-family: "Space Grotesk", sans-serif;
-    display: flex;
+background-image: url(image-from-rawpixel-id-16921471-jpeg.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+font-family: "Space Grotesk", sans-serif;
+display: flex;
 }
 .head{
-    width: 83%;
-    padding: 10px;
+width: 83%;
+padding: 10px;
 }
 .cuerpo{
-    padding: 10px;
-    width: 17%;
-    display: inline-block;
+padding: 10px;
+width: 17%;
+
+height: 100vh;
 }
-button .tarea{
-    display: inline-block;  
-    margin-right: 30px;
-}
+/* ---TITULO--- */
 .title{
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    border-radius: 10px;
-    background-color: white;
-    width: 400px;
-    padding: 10px 0;
-    text-align: center;
-    margin-bottom: 20px;
-    
+box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+border-radius: 10px;
+background-color: white;
+width: 400px;
+padding: 10px 0;
+text-align: center;
+margin-bottom: 20px;
 }
+/* ---PIZARRA DONDE VA LOS POST-ITS--- */
 .cardTask{
-    background-color: white;
-    min-height: 800px;
-    border-radius: 10px;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+background-color: #f7f4f4;
+border: 5px solid rgb(255, 255, 255);
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+min-height: 800px;
+border-radius: 10px;
+padding: 10px;
+display: grid;
+grid-template-columns: repeat(6, 1fr);
 }
+/* ---POST-IT CON LAS INFORMACIONES */
 .container {
-    position: relative; /* necesario para que el pin se posicione dentro de este contenedor */
-    margin: 10px;
-    background-color:var(--color-pink);
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
-    width: 210px;
-    height: 210px;
-    padding: 10px;
-    transition: .3s;
+background-color:var(--color-pink);
+box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+position: relative; 
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+margin: 10px;
+width: 210px;
+height: 210px;
+padding: 5px 10px;
+transition: .3s;
+
 }
-.container:nth-child(3n) {
-    transform: rotate(2deg);
+/* ---ROTACIÓN--- */
+.container:nth-child(2n+2) {
+transform: rotate(3deg);
 }
-.container:nth-child(4n) {
-    transform: rotate(-3deg);
+.container:nth-child(3n+2) {
+transform: rotate(2deg);
 }
-.container:nth-child(5n) {
-    transform: rotate(1deg);
+.container:nth-child(4n+2) {
+transform: rotate(-3deg);
 }
-.container:nth-child(6n) {
-    transform: rotate(-2deg);
-}.container:hover{
-    transform: scale(1.1);
-    cursor: pointer;
+.container:nth-child(5n+2) {
+transform: rotate(1deg);
 }
+
+/* ---HOVER CONTAINER--- */
+.container:hover{
+transform: scale(1.1);
+
+}
+
+/* ---IMAGEN PIN--- */
 .container .pin {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    font-size: 25px;
-    transform: rotate(20deg);
+position: absolute;
+top: 5px;
+right: 5px;
+font-size: 25px;
+transform: rotate(20deg);
+
 }
+/* ---MARGIN FECHA--- */
 p.fecha{
-    margin-top: 50px;
-    margin-bottom: 5px;
+margin-top: 10px;
+margin-bottom: 5px;
 }
+div.buttons{
+display: flex;
+justify-content: right;
+gap: 10px;
+border-top: 1px solid black;
+padding-top: 5px;
+}
+div.buttons button{
+background-color: transparent;
+border: none;
+font-weight: 500;
+font-size: 15px;
+transition: .2s;
+}
+div.buttons button:hover{
+transform: scale(1.2);
+cursor: pointer; 
+}
+/* ---P QUE CONTINE EL TEXT AREA--- */
+p.description{
+overflow-wrap: break-word; /* alternativa moderna */
+white-space: normal; /* asegura que el texto puede hacer saltos de línea */
+max-width: 100%;
+
+height: 100px;
+}
+.container-priority{
+border-top:1px solid rgb(2, 2, 2);
+}
+.btn-complete i{
+font-size: 20px;
+}
+
 /* ---FORMULARIO--- */
 .formAnnadir {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 80px auto;
-    background-color:white;
-    padding: 15px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
-  }
- input, textarea{
-    padding: 8px;
-    font-size: 1rem;
-    border: 1px solid #aaa;
-    outline: none;
-  }
-  .formAnnadir button {
-    padding: 10px;
-    font-size: 1rem;
-    background-color:var(--color-pink);
+display: flex;
+flex-direction: column;
+gap: 10px;
+margin: 80px auto;
+background-color:white;
+padding: 15px;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
+}
+input, textarea{
+padding: 8px;
+font-size: 1rem;
+border: 1px solid #aaa;
+outline: none;
+}
+.formAnnadir button {
+padding: 10px;
+font-size: 1rem;
+background-color:var(--color-pink);
+border: none;
+cursor: pointer;
+transition: .2s;
+font-weight: 600;
+border-radius: 10px;
+}
+.formAnnadir button:hover {
+background-color:var(--color-secondary);
+transform: scale(1.05);
+color: white;
+}
+select{
+padding: 10px;
+font-size: 1rem;
+background-color:white;
+border: 1px solid #aaa;
+cursor: pointer;
+transition: .2s;
+}
+/* ---Dialog--- */
+dialog{
     border: none;
-    cursor: pointer;
-    transition: .2s;
-    font-weight: 600;
-    border-radius: 10px;
-  }
-  .formAnnadir button:hover {
-    background-color:var(--color-secondary);
-    transform: scale(1.05);
+    margin: 200px auto;
+    background-color: rgb(102, 101, 101);
+    border-radius:10px ;
     color: white;
-  }
-  select{
-    padding: 10px;
-    font-size: 1rem;
-    background-color:white;
-    border: 1px solid #aaa;
-    cursor: pointer;
+    padding: 15px;
+    text-align: center;
+    flex-direction: column;
+}
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.425);
+}
+
+#accept, #cancel{
+    background-color: green;
+    color: white;
+    align-items: center;
+    font-weight: 600;
     transition: .2s;
-    
-  }
- div.buttons{
-    margin-top: 10px;
-    display: flex;
-    justify-content: right;
-    gap: 10px;
- }
- div.buttons button{
-    background-color: transparent;
-    color: black;
-    font-weight: 500;
+    width: 75%;
+    padding: 9px;
     border: none;
+    margin: 5px;  
     border-radius: 5px;
-    font-size: 15px;
-    
- }
- 
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+#cancel{
+    background-color: rgb(204, 33, 33);
+}
+#accept:hover, #cancel:hover{
+    cursor: pointer;
+    scale: .89;
+    box-shadow: none;
+}
+.button{
+    display: flex;
+    margin-top: 20px;
+}
+.emergentes i{
+    text-align: right;
+    margin-bottom: 20px;
+    transition: .2s;
+    font-size: 20px;
+}
+.emergentes i:hover{
+    cursor: pointer;
+    font-size: 22px;
+}

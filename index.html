@@ -15,17 +15,27 @@
     
     <div class="cuerpo">
        <form action="" class="formAnnadir">
-            <input type="text" placeholder="Título" name="titulo" >
-            <textarea placeholder="Descripción" name="descripcion" rows="3" ></textarea>
-            <input type="date" name="fecha">
-            <select name="" id="" class="priorityForm">
+            <input type="text" placeholder="Título" name="titulo" id="title-task">
+            <textarea placeholder="Descripción" maxlength="50" name="descripcion" rows="3" id="description-task" ></textarea>
+            <input type="date" name="fecha" id="date-task">
+            <select id="priority-task" name="priority-task" class="priorityForm">
                 <option value="">Seleccionar prioridad</option>
-                <option value="baja">Baja</option>
-                <option value="media">Media</option>
-                <option value="alta">Alta</option>
+                <option value="Baja">Baja</option>
+                <option value="Media">Media</option>
+                <option value="Alta">Alta</option>
             </select>
-            <button type="submit" class="btnEnviar">Agregar</button>
+            <button type="submit" class="btnEnviar">Agregar </button>
         </form> 
+          
+    <dialog id="customDialogConfirm" class="emergentes">
+        <i id="close-button-confirm" class="fa-solid fa-xmark"></i>
+        <p>¿Estás seguro de que quieres borrar la tarea?</p>
+    
+        <div class="button">
+            <button id="accept">Aceptar</button>
+            <button id="cancel">Cancelar</button>
+        </div> 
+    </dialog>
     </div>
 
     <script src="app.js"></script>
