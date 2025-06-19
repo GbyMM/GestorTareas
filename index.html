@@ -25,8 +25,25 @@
                 <option value="Alta">Alta</option>
             </select>
             <button type="submit" class="btnEnviar">Agregar </button>
-        </form> 
-          
+        </form>
+        <div class="color green">
+            Prioridad Baja
+            <div class="circular" style="background-color: green;"></div>
+        </div>
+        <div class="color yellow">
+            Prioridad Media
+            <div class="circular" style="background-color: rgb(255, 230, 0);"></div>
+        </div>
+        <div class="color red">
+            Prioridad Alta
+            <div class="circular" style="background-color: rgb(255, 0, 0);"></div>
+        </div>
+        <div class="color purple">
+            Tarea finalizada
+            <div class="circular" style="background-color: rgb(75, 0, 173);"></div>
+        </div>
+    </div>
+
     <dialog id="customDialogConfirm" class="emergentes">
         <i id="close-button-confirm" class="fa-solid fa-xmark"></i>
         <p>¿Estás seguro de que quieres borrar la tarea?</p>
@@ -36,8 +53,6 @@
             <button id="cancel">Cancelar</button>
         </div> 
     </dialog>
-    </div>
-
     <script src="app.js"></script>
 </body>
 </html>
